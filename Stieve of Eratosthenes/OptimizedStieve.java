@@ -1,9 +1,9 @@
 import java.util.*;
 
 /**
- * Stieve
+ * OptimizedStieve
  */
-public class Stieve {
+public class OptimizedStieve {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class Stieve {
         isPrime[0] = isPrime[1] = false; // 0 and 1 are not prime numbers
 
         // Sieve of Eratosthenes algorithm
-        for (int p = 2; 2 * p <= n; p++) {
+        for (int p = 2; p * p <= n; p++) {
             if (isPrime[p]) {
                 // Update all multiples of p to not prime
                 for (int i = p * p; i <= n; i += p) {
